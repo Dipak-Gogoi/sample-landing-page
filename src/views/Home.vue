@@ -1,40 +1,40 @@
 <template>
   <div class="home">
-    
+  
     <div class="banner">
       <div class="navbar-custom">
-      <nav class="custom-navigation-bar navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+        <nav class="custom-navigation-bar navbar navbar-light navbar-expand-md bg-faded justify-content-center">
           <a href="/" class="navbar-brand d-flex w-50 mr-auto">
             <img src="../assets/logo1.png" width="80px">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-              <span class="navbar-toggler-icon"></span>
-          </button>
+                  <span class="navbar-toggler-icon"></span>
+              </button>
           <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-              <ul class="nav navbar-nav ml-auto w-100 justify-content-end p-2 d-flex align-items-center">
-                  <li class="nav-item">
-                    <a href="" class="p-3">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="p-3">Service</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="p-3">Project</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="p-3">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="" class="p-3">Contact</a>
-                  </li>
-                  <li>
-                    <button class="btn btn-nav" type="buttom">My project</button>
-                  </li>
-              </ul>
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end p-2 d-flex align-items-center">
+              <li class="nav-item">
+                <a href="" class="p-3">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="p-3">Service</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="p-3">Project</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="p-3">About us</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="p-3">Contact</a>
+              </li>
+              <li>
+                <button class="btn btn-nav" type="buttom">My project</button>
+              </li>
+            </ul>
           </div>
-      </nav>
-
-        
+        </nav>
+  
+  
       </div>
       <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 banner-content">
@@ -42,15 +42,15 @@
             <h1 class="head-text">creative</h1>
             <h1 class="head-text">agency</h1>
             <div class="mt-5 play-button-wrapper">
-              <span><i class='fa fa-play-circle play-button' style='font-size:60px'></i></span>
-              <span class="pl-2">Watch a video intro</span>
+              <span><i class='fa fa-play-circle play-button' style='font-size:40px'></i></span>
+              <span class="pl-2" style="font-size: 16px">Watch a video intro</span>
             </div>
-            <div class="social-icon mt-5">
-              <span><i class="fa fa-facebook-f" style="font-size:24px"></i></span>
-              <span class="pl-4"><i class="fa fa-twitter" style="font-size:24px"></i></span>
-              <span class="pl-4"><i class="fa fa-dribbble" style="font-size:24px"></i></span>
-              <span class="pl-4"><i class="fa fa-linkedin" style="font-size:24px"></i></span>
-            </div>
+            <!-- <div class="social-icon mt-5">
+                <a href="##"><span><i class="fa fa-facebook-f" style="font-size:24px"></i></span></a>
+                <a href="##"><span class="pl-4"><i class="fa fa-twitter" style="font-size:24px"></i></span></
+                <span class="pl-4"><i class="fa fa-dribbble" style="font-size:24px"></i></span>
+                <span class="pl-4"><i class="fa fa-linkedin" style="font-size:24px"></i></span>
+              </div> -->
           </div>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 image-wrapper">
@@ -64,13 +64,13 @@
       <div class="container">
         <h1 class="service-head ml-3">services & portfolio</h1>
         <div class="row service-main-contain">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex mt-5" v-for="(services,index) in services" :key="index">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 d-flex mt-5" v-for="(service,index) in services" :key="index">
             <div class="services-image">
-              <img :src="require('../assets/' + services.imageName)" :alt="services.name" width="50px">
+              <i :class="service.icon" style="font-size:24px"></i>
             </div>
             <div class="services-contain flex-grow-1 text-left pl-3">
-              <h4 class="services-name">{{services.name}}</h4>
-              <p class="">{{services.tag}}</p>
+              <h4 class="services-name">{{service.name}}</h4>
+              <p class="">{{service.tag}}</p>
             </div>
           </div>
         </div>
@@ -103,21 +103,21 @@
               <p class="person-tag">{{person.tag}}</p>
               <p>
                 <span><a :href="person.facebook" target="_blank">
-                  <i class="fab fa-facebook icon"></i>
-                  </a>
-                </span>
+                      <i class="fab fa-facebook icon"></i>
+                      </a>
+                    </span>
                 <span class="pl-4"><a :href="person.twitter" target="_blank">
-                  <i class="fab fa-twitter icon"></i>
-                  </a>
-                </span>
+                      <i class="fab fa-twitter icon"></i>
+                      </a>
+                    </span>
                 <span class="pl-4"><a :href="person.dribbble" target="_blank">
-                  <i class="fab fa-dribbble icon"></i>
-                  </a>
-                </span>
+                      <i class="fab fa-dribbble icon"></i>
+                      </a>
+                    </span>
                 <span class="pl-4"><a :href="person.linkedIn" target="_blank">
-                  <i class="fab fa-linkedin icon"></i>
-                  </a>
-                </span>
+                      <i class="fab fa-linkedin icon"></i>
+                      </a>
+                    </span>
               </p>
             </div>
           </div>
@@ -137,51 +137,51 @@
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
           <div class="achievements-contain">
             <div class="container">
-            <h2 class="achievements-head">clients & achievements</h2>
-            <div class="achievement-content">
-              <div class="row pt-5">
-                <div class="col-md-6 achievement-options">
-                  <div class="row achievement-options-wrapper">
-                    <div class="col-md-4"><img src="../assets/achieve4.png" width="50px"></div>
-                    <div class="col-md-8 ">
-                      <span class="achieve-text">emerging design agency (2017)</span>
+              <h2 class="achievements-head">clients & achievements</h2>
+              <div class="achievement-content">
+                <div class="row pt-5">
+                  <div class="col-md-6 achievement-options">
+                    <div class="row achievement-options-wrapper">
+                      <div class="col-md-4"><img src="../assets/achieve4.png" width="50px"></div>
+                      <div class="col-md-8 ">
+                        <span class="achieve-text">emerging design agency (2017)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 achievement-options">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="../assets/achieve4.png" width="50px"></div>
+                      <div class="col-md-8">
+                        <span class="achieve-text">top 10 design agency (2018)</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 achievement-options">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="../assets/achieve4.png" width="50px"></div>
-                    <div class="col-md-8">
-                      <span class="achieve-text">top 10 design agency (2018)</span>
+                <div class="row pt-5 achievement-options-wrapper">
+                  <div class="col-md-6 achievement-options">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="../assets/achieve4.png" width="50px">
+                      </div>
+                      <div class="col-md-8 ">
+                        <span class="achieve-text">top 5 design agency (2019) internationally </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 achievement-options">
+                    <div class="row">
+                      <div class="col-md-4"><img src="../assets/achieve4.png" width="50px"></div>
+                      <div class="col-md-8 t">
+                        <span class="achieve-text">going to get no. 1 place internationally</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row pt-5 achievement-options-wrapper">
-                <div class="col-md-6 achievement-options">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="../assets/achieve4.png" width="50px">
-                    </div>
-                    <div class="col-md-8 ">
-                      <span class="achieve-text">top 5 design agency (2019) internationally </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 achievement-options">
-                  <div class="row">
-                    <div class="col-md-4"><img src="../assets/achieve4.png" width="50px"></div>
-                    <div class="col-md-8 t">
-                      <span class="achieve-text">going to get no. 1 place internationally</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="company-logo">
+                <img src="../assets/Trusted by the best.png" width="600px">
               </div>
-            </div>
-            <div class="company-logo">
-              <img src="../assets/Trusted by the best.png" width="600px">
-            </div>
             </div>
           </div>
         </div>
@@ -287,31 +287,37 @@
         this.services = [{
             imageName: "website-design.svg",
             name: "Web Design",
+            icon: 'fas fa-drafting-compass',
             tag: "modern web design services with new trends and direction.",
           },
           {
             imageName: "branding.svg",
             name: "Branding",
+            icon: 'fas fa-pencil-ruler',
             tag: "highly professional branding and logo design work.",
           },
           {
             imageName: "motion graphics.svg",
             name: "Motion Graphics",
-            tag: "modern motion graphics and animationfor business.",
+            icon: 'fas fa-photo-video',
+            tag: "modern motion graphics and animation for business.",
           },
           {
             imageName: "ui design.svg",
             name: "ui/ux design",
-            tag: "standard screen generationnd designfor all devices.",
+            icon: 'fas fa-mobile-alt',
+            tag: "standard screen generated design for all devices.",
           },
           {
             imageName: "web development.svg",
             name: "Web Development",
+            icon: 'fas fa-columns',
             tag: "website developing is something we are best in",
           },
           {
             imageName: "app testing.svg",
             name: "App testing",
+            icon: 'fas fa-user-check',
             tag: "we test app for better user exprience and results",
           },
   
@@ -352,12 +358,23 @@
 </script>
 
 <style>
-.logo{
-  padding-top: 5%;
-}
-#hamburge{
-  /* display: block; */
-}
+  .logo {
+    padding-top: 5%;
+  }
+  
+  #hamburge {
+    /* display: block; */
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: #502EFF;
+  }
+  
+  a:hover {
+    color: rgb(150, 133, 236);
+  }
+  
   .head-text {
     color: #502EFF;
     font-size: 114px;
@@ -470,7 +487,7 @@
   }
   
   .btn:hover {
-    color: #f53903 !important;
+    color: rgb(170, 170, 170) !important;
   }
   
   .team-head {
@@ -492,7 +509,8 @@
   .team-image {
     box-shadow: rgba(0, 0, 0, 0.2);
   }
-  .person-tag{
+  
+  .person-tag {
     /* width: 200px; */
     /* padding-right: 20%; */
   }
@@ -559,9 +577,10 @@
     text-align: left;
   }
   
-  .contact-text{
+  .contact-text {
     color: rgb(180, 178, 175);
   }
+  
   .contact-tag {
     text-align: center;
     line-height: 1.9rem;
@@ -618,17 +637,12 @@
     color: #502EFF;
   }
   
-  .service-text a {
-    color: #502EFF;
-  }
-  
   .support-text {
     line-height: 0.8rem;
-    color: #502EFF;
   }
   
-  .support-text a {
-    color: #502EFF;
+  .support-text a:hover {
+    color: rgb(142, 122, 243);
   }
   
   .footer-icon i {
@@ -643,114 +657,115 @@
   .container {
     margin-top: 10%;
   }
-
-/* mobile-view */
-
-@media only screen and (max-width: 600px){
   
-  .play-button-wrapper,.social-icon,.head-text {
-    display: inline-flex;
-    text-align: center;
-  }
-  .custom-navigation-bar {
-    width: 100%;
-    margin: auto;
-  }
-  #collapsingNavbar3 {
-    background: #fff;
-  }
-  .service-content {
-    width:100%;
-    padding:1rem 0 1rem 0  !important;
-  }
   
-  .head-text{
-    font-size: 80px;
+  /* mobile-view */
+  
+  @media only screen and (max-width: 600px) {
+    .play-button-wrapper,
+    .social-icon,
+    .head-text {
+      display: inline-flex;
+      text-align: center;
+    }
+    .custom-navigation-bar {
+      width: 100%;
+      margin: auto;
+    }
+    #collapsingNavbar3 {
+      background: #fff;
+    }
+    .service-content {
+      width: 100%;
+      padding: 1rem 0 1rem 0 !important;
+    }
+    .head-text {
+      font-size: 80px;
+    }
+    .image-wrapper img {
+      display: none;
+    }
+    .service-head {
+      font-size: 50px;
+      margin: 0;
+      text-align: center;
+      max-width: 100%;
+    }
+    #service-photos {
+      padding: 0;
+    }
+    .achievement-options-wrapper {
+      padding: 0 !important;
+      width: 100%;
+    }
+    .achievement-options {
+      margin-top: 2rem;
+    }
+    .button {
+      padding-top: 20%
+    }
+    .btn:hover {
+      color: rgb(216, 216, 218) !important;
+    }
+    .team-subhead {
+      width: 340px;
+      font-size: 26px;
+    }
+    .team-image {
+      padding-top: 10%;
+    }
+    .achievements-head {
+      width: 350px;
+      font-size: 50px;
+      text-align: center;
+    }
+    .contact-tag {
+      width: 340px;
+      font-size: 20px;
+    }
+    .email-input {
+      width: 200px;
+    }
+    .button-input {
+      padding: 12px;
+      width: 90px;
+    }
+    .agency-text {
+      text-align: center;
+      padding-left: 7%;
+    }
+    #nav-options {
+      display: none !important;
+    }
+    .achievements-image {
+      display: none !important;
+    }
+    .achievements-head {
+      width: 330px;
+    }
+    .achievement-content {
+      padding: 0;
+    }
+    .achieve-text {
+      text-align: center;
+      width: 100%;
+    }
+    .footer-content {
+      text-align: left;
+    }
+    .agency-text {
+      padding: 0;
+      text-align: left;
+    }
+    .footer-services {
+      margin-top: 2rem;
+    }
+    .footer-support {
+      margin-top: 2rem;
+    }
+    .footer-social {
+      margin-top: 2rem;
+    }
   }
-  .image-wrapper img{
-    display: none;
-  }
-  .service-head{
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
-    max-width: 100%;
-  }
-  #service-photos{
-    padding: 0;
-  }
-  .achievement-options-wrapper {
-    padding: 0 !important;
-    width: 100%;
-  }
-  .achievement-options {
-    margin-top: 2rem;
-  }
-  .button{
-    padding-top: 20%
-  }
-  .btn:hover {
-    color: #f53903 !important;
-  }
-  .team-subhead{
-    width: 340px;
-    font-size: 26px;
-  }
-  .team-image{
-    padding-top: 10%;
-  }
-  .achievements-head{
-    width: 350px;
-    font-size: 50px;
-    text-align: center;
-  }
-  .contact-tag{
-    width: 340px;
-    font-size: 20px;
-  }
-  .email-input{
-    width: 200px;
-  }
-  .button-input{
-    padding: 12px;
-    width: 90px;
-  }
-  .agency-text{
-    text-align: center;
-    padding-left: 7%;
-  }
-  #nav-options{
-    display: none !important;  
-  }
-  .achievements-image {
-     display: none !important;  
-  }
-  .achievements-head{
-    width: 330px;
-  }
-  .achievement-content{
-    padding: 0;
-  }
-  .achieve-text{
-    text-align: center;
-    width: 100%;
-  }
-  .footer-content {
-    text-align: left;
-  }
-  .agency-text {
-    padding:0;
-    text-align:left;
-  }
-  .footer-services {
-    margin-top: 2rem;
-  }
-  .footer-support {
-    margin-top: 2rem;
-  }
-  .footer-social {
-    margin-top: 2rem;
-  }
-}
 </style>
 
